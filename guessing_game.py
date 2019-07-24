@@ -1,16 +1,16 @@
 ######################Guessing Game#####################
  
 import random 
-random_int = random.randint(0,9)
-i = 1;
-while i<=3:
-    user_guess = int(input(f"Guess {i}: "))
-    if user_guess == random_int:
+secret_number = random.randint(0,9)
+guess_limit = 3
+guess_count = 1
+while guess_count<=guess_limit:
+    guess = int(input(f"Guess {guess_count}: "))
+    guess_count += 1
+    if guess == secret_number:
         print('Congratulations!! \nYou Won! :) ')
         break
-        exit()
-    elif i==3 :
-        print(f"Sorry, You Loose :( \n The number is {random_int} ")
-    else:
-        i += 1
+else :
+    print(f"Sorry, You Loose :( \nThe number is {secret_number} ")
+
 
